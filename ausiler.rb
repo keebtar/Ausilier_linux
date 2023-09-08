@@ -43,11 +43,15 @@ def barra_de_carregamento
   puts "1: deb"
   puts "2: apt"
   puts "3: tar"
-  puts "4: Desinstalar"
-  puts "5: exit"
+  puts "4: mv (renomear)"
+  puts "5: cp"
+  puts "6: mkdir"
+  puts "7: ssh"
+  puts "8: Desinstalar"
+  puts "9: exit"
   print "Escolha: "
-
     escolha = gets.chomp
+
     if escolha.to_i == 1
       system("ls -a")
       system("pwd")
@@ -61,6 +65,7 @@ def barra_de_carregamento
       puts "--------------------------------------------------------------"
       system("ruby ausiler.rb")
     else
+
       if escolha.to_i == 2
         print "Informe o nome do apt: "
         arquivo = gets.chomp
@@ -72,6 +77,7 @@ def barra_de_carregamento
         puts "--------------------------------------------------------------"
         system("ruby ausiler.rb")
         else
+
         if escolha.to_i == 3
           system("ls -a")
           system("pwd")
@@ -85,7 +91,61 @@ def barra_de_carregamento
           puts "--------------------------------------------------------------"
           system("ruby ausiler.rb")
         else
+
           if escolha.to_i == 4
+          system("ls -a")
+          system("pwd")
+          print "Informe o nome do arquivo para renomear: "
+          arquivo = gets.chomp
+          puts "--------------------------------------------------------------"
+          print "Preparando: "
+          puts "renome"
+          barra_de_carregamento
+          system("mv #{arquivo}")
+          puts "--------------------------------------------------------------"
+          system("ruby ausiler.rb")
+          else
+
+            if escolha.to_i == 5 
+              system("ls -a")
+              system("pwd")
+              print "Informe o arquivo e o diretorio que será copiado: "
+              arquivo = gets.chomp
+              puts "--------------------------------------------------------------"
+              print "Preparando: "
+              puts "Mover"
+              barra_de_carregamento
+              system("cp #{arquivo}")
+              puts "--------------------------------------------------------------"
+              system("ruby ausiler.rb")
+              else
+
+            if escolha.to_i == 6
+              system("ls -a")
+              system("pwd")
+              print "Informe o nome da pasta que será criada: "
+              arquivo = gets.chomp
+              puts "--------------------------------------------------------------"
+              print "Preparando: "
+              puts "pasta"
+              barra_de_carregamento
+              system("mkdir #{arquivo}")
+              puts "--------------------------------------------------------------"
+              system("ruby ausiler.rb")  
+            else
+            
+              if escolha.to_i == 7
+                print "Informe a conexão e a porta: "
+                arquivo = gets.chomp
+                puts "--------------------------------------------------------------"
+                print "Preparando: "
+                puts "SSH"
+                barra_de_carregamento
+                exec("ssh #{arquivo}")
+                puts "--------------------------------------------------------------"
+              else
+
+          if escolha.to_i == 8
             print "Informe o nome da aplicação: "
             desinstalar = gets.chomp
             puts "--------------------------------------------------------------"
@@ -96,13 +156,19 @@ def barra_de_carregamento
             puts "--------------------------------------------------------------"
             system("ruby ausiler.rb")
           else
-            if escolha.to_i == 5
+
+            if escolha.to_i == 9
               puts "Saindo..."
               system("exit")
               else
-                if escolha.to_i <= 5
+                
+                if escolha.to_i <= 9
                 else
                   system("ruby ausiler.rb")
+                   end
+                  end
+                end
+              end
             end
           end
         end
