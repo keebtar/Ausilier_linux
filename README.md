@@ -1,5 +1,5 @@
-# Ausilier_linux
-Uma ferramenta feita para terminal linux escrita em ruby, ela ausilia ao extrar arquivos .tar instalar .debs e desinstalar sem ter que digitar comandos, é pratica
+# Ausilier_linux beta
+Uma ferramenta feita para terminal linux escrita em ruby, ela ausilia ao extrair arquivos .tar instalar .debs e desinstalar sem ter que digitar comandos, é pratica
 
 
 
